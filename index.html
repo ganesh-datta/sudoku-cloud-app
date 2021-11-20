@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>SudokUber</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <meta name="google-signin-client_id" content="Y216721756060-hrkqprifatu713ftedo1cllteagadmt7.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<style>
+    a:link, a:visited {
+      background-color: #f44336;
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 100px;
+        margin-bottom: 300px;
+        margin-right: 150px;
+        margin-left: 80px;
+    }
+    
+    a:hover, a:active {
+      background-color: red;
+    }
+
+    #signin{
+        width: 50%;
+        margin-top: 300px;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 80px;
+    }
+</style>
+
+<body>
+    <div id="signin" class="g-signin2" data-onsuccess="onSignIn"></div>
+
+    <a href="#">Continue As Guest</a>
+    <br></br> 
+    
+            
+    
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        function signOut() 
+        {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () 
+            {
+                console.log('User signed out.');
+            });
+        }
+    </script>
+
+</body>
+</html>
